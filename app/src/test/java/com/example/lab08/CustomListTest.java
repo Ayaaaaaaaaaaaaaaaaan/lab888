@@ -13,14 +13,14 @@ public class CustomListTest {
 
         assertTrue(list.hasCity(calgary));
     }
-}
-@Test
-public void testDeleteCity() {
-    CustomList list = new CustomList();
-    City toronto = new City("Toronto", "ON");
-    list.addCity(toronto);
 
-    // deleteCity() doesn't exist yet — this will fail
-    list.deleteCity(toronto);
-    assertFalse(list.hasCity(toronto));
+    @Test
+    public void testDeleteCity() {
+        CustomList list = new CustomList();
+        City toronto = new City("Toronto", "ON");
+        list.addCity(toronto);
+
+        list.deleteCity(toronto);
+        assertFalse(list.hasCity(toronto));
+    }
 }
